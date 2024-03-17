@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shea Page - Prosoquite Company</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8b8a8a; /* Light purple background color */
+            color: #333;
+        }
+
+        #page-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        #shea-image {
+            max-width: 100%; /* Adjust the size of the image as needed */
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+         header {
+            background-color: #2b2b29;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        nav {
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+           
+           
+        header img.logo {
+            position: absolute; 
+            top: -75px; 
+            left: -30px; 
+            width: 140px; 
+        }
+
+       
+
+        nav a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #2b2b29;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ad8e44; 
+        }
+
+        @keyframes moveLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+
+        h1 {
+            color: #070706;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-family: cursive; /* Specify the desired font family */
+        }
+
+      
+
+            nav a {
+                padding: 6px 10px; /* Adjust navigation link padding */
+                font-size: 12px; /* Adjust navigation link font size */
+            }
+        }
+		#product-details {
+                max-width: 90%; /* تحديد العرض الأقصى لتناسب الشاشات الصغيرة */
+            }
+			        /* تعديلات للشاشات الصغيرة (أقل من 600 بكسل) */
+        @media screen and (max-width: 600px) {
+            nav {
+                position: static; /* إلغاء تثبيت القائمة في الأعلى */
+                transform: none; /* إلغاء التحويل */
+                margin-top: 10px; /* هامش أعلى */
+            }
+
+            #product-details {
+                max-width: 90%; /* تحديد العرض الأقصى لتناسب الشاشات الصغيرة */
+            }
+
+            h1 {
+                font-size: 24px; /* تقليل حجم العنوان للشاشات الصغيرة */
+            }
+
+            p {
+                max-width: 90%; /* تحديد العرض الأقصى للنص لتناسب الشاشات الصغيرة */
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="image/comp.png" alt="Company Logo">
+        <nav>
+            <a href="index.html">المنزل</a>
+            <a href="Buy.html">شراء</a>
+            <a href="Shea.html">شعارنا</a>
+            <a href="firstPage.html">منْ نحنُ ؟</a>
+        </nav>
+    </header>
+    <div id="page-content">
+        <img id="shea-image" src="image/shear.jpg" alt="Shea Butter">
+    </div>
+</body>
+
+</html>

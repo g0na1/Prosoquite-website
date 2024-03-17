@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c6c6c6;
+            color: #333;
+            text-align: center;
+        }
+
+        #product-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .product {
+            margin: 20px;
+            max-width: 150px;
+            text-align: center;
+            padding: 15px;
+            background-color: #cccac5;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 80%; /* Adjusted maximum width for the images */
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        .buy-button {
+            display: block;
+            padding: 10px 20px;
+            background-color: #646464;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #ceb174;
+        }
+
+        
+        header img.logo {
+            position: absolute; 
+            top: -75px; 
+            left: -30px; 
+            width: 140px; 
+        }
+
+
+        header {
+            background-color: #2b2b29;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        nav {
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+            nav a {
+                padding: 6px 10px; /* Adjust navigation link padding */
+                font-size: 12px; /* Adjust navigation link font size */
+            }
+       nav a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #2b2b29;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ad8e44; 
+        }
+		 @keyframes moveLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+		 nav a {
+                padding: 6px 10px; /* Adjust navigation link padding */
+                font-size: 12px; /* Adjust navigation link font size */
+            }
+        }
+		#product-details {
+                max-width: 90%; /* تحديد العرض الأقصى لتناسب الشاشات الصغيرة */
+            }
+
+               /* تعديلات للشاشات الصغيرة (أقل من 600 بكسل) */
+        @media screen and (max-width: 600px) {
+            nav {
+                position: static; /* إلغاء تثبيت القائمة في الأعلى */
+                transform: none; /* إلغاء التحويل */
+                margin-top: 10px; /* هامش أعلى */
+            }
+
+            #product-details {
+                max-width: 90%; /* تحديد العرض الأقصى لتناسب الشاشات الصغيرة */
+            }
+
+            h1 {
+                font-size: 24px; /* تقليل حجم العنوان للشاشات الصغيرة */
+            }
+
+            p {
+                max-width: 90%; /* تحديد العرض الأقصى للنص لتناسب الشاشات الصغيرة */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="image/comp.png" alt="Company Logo">
+        <nav>
+            <a href="index.html">المنزل</a>
+            <a href="Buy.html">شراء</a>
+            <a href="Shea.html">شعارنا</a>
+            <a href="firstPage.html">منْ نحنُ ؟</a>
+        </nav>
+    </header>
+    <div id="product-container">
+        <div class="product">
+            <img src="image/wood1.jpg" alt="Product 1">
+            <h4>قطعة من المنتج</h4>
+            <h4>RO السعر :5</h4>
+            <a href="form.html" class="buy-button">إشتري الآن</a>
+        </div>
+
+        <div class="product">
+            <img src="image/table1.jpg" alt="Product 2">
+            <h3>طاولة (قريبًا)</h3>
+         
+            <a href="form.html" class="buy-button">إشتري الآن</a>
+        </div>
+
+        <div class="product">
+            <img src="image/tch.jpg" alt="Product 3">
+            <h3>كرسي (قريبًا)</h3>
+         
+            <a href="form.html" class="buy-button">إشتري الآن</a>
+        </div>
+
+        <div class="product">
+            <img src="image/gg1.jpg" alt="Product 4">
+            <h3>ملاعق (قريبًا)</h3>
+         
+            <a href="form.html" class="buy-button">إشتري الآن</a>
+        </div>
+
+        <div class="product">
+            <img src="image/yy1.jpg" alt="Product 4">
+            <h3>لوح التقطيع (قريبًا)</h3>
+        
+            <a href="form.html" class="buy-button">إشتري الآن</a>
+        </div>
+    </div>
+</body>
+
+</html>

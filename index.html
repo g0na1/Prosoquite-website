@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Prosoquite Company</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #000;
+            color: #fff;
+        }
+
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            top: -50%; 
+        }
+
+        #image-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            top: -50%;
+            background-image: url("image/mms.png"); /* تحديد الصورة البديلة */
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-family: cursive;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        #start-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 18px;
+            background-color: #fff;
+            color: #bcab83;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #start-button:hover {
+            background-color: #897501;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                align-items: flex-start;
+                padding-top: 20px;
+            }
+
+            #video-background {
+                display: none;
+            }
+
+            #image-background {
+                background-image: url("image/mms.png"); /* تحديد الصورة البديلة */
+                background-size: cover;
+                background-position: center;
+                display: block; /* إظهار الصورة عندما تكون الشاشة صغيرة */
+            }
+
+            #welcome-section {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            #start-button {
+                padding: 8px 16px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="image/vid1.mp4" type="video/mp4">
+    </video>
+
+    <div id="image-background"></div> <!-- إضافة العنصر الجديد للصورة -->
+
+    <audio autoplay loop>
+        <source src="image/oud.M4A" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="welcome-section">
+        <h1>Welcome to Prosoquite Company</h1>
+        <a href="firstPage.html" id="start-button">إبدأ</a>
+    </div>
+
+    <script>
+        // التبديل بين الفيديو والصورة بناء على حجم الشاشة
+        function toggleBackground() {
+            var videoBackground = document.getElementById("video-background");
+            var imageBackground = document.getElementById("image-background");
+            if (window.innerWidth <= 600) {
+                videoBackground.style.display = "none";
+                imageBackground.style.display = "block";
+            } else {
+                videoBackground.style.display = "block";
+                imageBackground.style.display = "none";
+            }
+        }
+
+        // تحديث التبديل عند تحميل الصفحة وعند تغيير حجم الشاشة
+        window.onload = toggleBackground;
+        window.onresize = toggleBackground;
+    </script>
+</body>
+</html>
