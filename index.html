@@ -35,7 +35,7 @@
             min-height: 100%;
             z-index: -1;
             top: -50%;
-            background-image: url("image/mms.png"); /* تحديد الصورة البديلة */
+            background-image: url("image/mms.png");
             background-size: cover;
             background-position: center;
         }
@@ -49,6 +49,7 @@
         p {
             font-size: 18px;
             line-height: 1.6;
+            margin-bottom: 20px; /* إضافة بعض التباعد بين الفقرات */
         }
 
         #start-button {
@@ -80,23 +81,27 @@
             }
 
             #image-background {
-                background-image: url("image/mms.png"); /* تحديد الصورة البديلة */
-                background-size: cover;
-                background-position: center;
-                display: block; /* إظهار الصورة عندما تكون الشاشة صغيرة */
+                display: block;
             }
 
             #welcome-section {
                 text-align: center;
+                padding: 20px;
             }
 
             h1 {
                 font-size: 24px;
+                margin-top: 0;
             }
 
             #start-button {
                 padding: 8px 16px;
                 font-size: 16px;
+            }
+
+            p {
+                font-size: 16px; /* تقليل حجم النص لجعله أكثر قراءة */
+                margin-bottom: 10px; /* تقليل التباعد بين الفقرات */
             }
         }
     </style>
@@ -106,7 +111,7 @@
         <source src="image/vid1.mp4" type="video/mp4">
     </video>
 
-    <div id="image-background"></div> <!-- إضافة العنصر الجديد للصورة -->
+    <div id="image-background"></div>
 
     <audio autoplay loop>
         <source src="image/oud.M4A" type="audio/mpeg">
@@ -115,11 +120,11 @@
 
     <div id="welcome-section">
         <h1>Welcome to Prosoquite Company</h1>
+        <p>مرحبًا بك في شركة بروسوكويت</p>
         <a href="firstPage.html" id="start-button">إبدأ</a>
     </div>
 
     <script>
-        // التبديل بين الفيديو والصورة بناء على حجم الشاشة
         function toggleBackground() {
             var videoBackground = document.getElementById("video-background");
             var imageBackground = document.getElementById("image-background");
@@ -132,7 +137,6 @@
             }
         }
 
-        // تحديث التبديل عند تحميل الصفحة وعند تغيير حجم الشاشة
         window.onload = toggleBackground;
         window.onresize = toggleBackground;
     </script>
